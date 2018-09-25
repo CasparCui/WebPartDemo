@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="f37f267e-3aa2-4f54-b054-584f47f630e9" 
+        solutionId="f37f267e-3aa2-4f54-b054-584f47f630e9" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="WebServiceDemo"
+        sharePointProductVersion="15.0">
+</package>
