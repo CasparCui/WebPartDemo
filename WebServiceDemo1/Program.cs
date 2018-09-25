@@ -14,7 +14,7 @@ namespace WebServiceDemo1
             var itemQuery = xmlDoc.CreateNode(XmlNodeType.Element, "Query", string.Empty);
             var itemQueryOptions = xmlDoc.CreateNode(XmlNodeType.Element, "QueryOptions", string.Empty);
             var itemViewFields = xmlDoc.CreateNode(XmlNodeType.Element, "ViewFields", string.Empty);
-            itemQueryOptions.InnerXml = @"<IncludeMandatoryColumns>False</IncludeMandatoryColumns> <DataInUtc>True</DataInUtc>";
+            itemQueryOptions.InnerXml = @"<IncludeMandatoryColumns>False</IncludeMandatoryColumns> <DatesInUtc>True</DatesInUtc>";
             itemViewFields.InnerXml = @"<FieldRef Name = 'Title'/>";
             itemQuery.InnerXml = @"<Where><Eq><FieldRef Name='Title' /><Value Type='Text'>fff</Value></Eq></Where>";
 
