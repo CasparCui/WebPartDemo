@@ -15,7 +15,7 @@
     <asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=WIN-2D10C362GIE;Initial Catalog=Hwcui_WSS_Content_13SP1_2K;Uid=sa;Pwd=1qaz2wsxE" SelectCommand="SELECT [Id], [SiteId], [DirName], [LeafName], [Level] FROM [AllDocs]"></asp:SqlDataSource>
 </p>
-<asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True">
+<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SPSqlDataSource1">
     <AlternatingRowStyle BackColor="White" />
     <EditRowStyle BackColor="#2461BF" />
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -28,4 +28,8 @@
     <SortedDescendingCellStyle BackColor="#E9EBEF" />
     <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView>
+
+<SharePoint:SPSqlDataSource ID="SPSqlDataSource1" runat="server" AllowIntegratedSecurity="False" CacheDuration="Infinite" CacheExpirationPolicy="Absolute" CacheKeyDependency="" CancelSelectOnNullParameter="True" ConflictDetection="OverwriteChanges" ConnectionString="Data Source=WIN-2D10C362GIE;Initial Catalog=Hwcui_WSS_Content_13SP1_2K;Uid=sa;Pwd=1qaz2wsxE" DataSourceMode="DataSet" DeleteCommand="" DeleteCommandType="Text" EnableCaching="False" FilterExpression="" InsertCommand="" InsertCommandType="Text" OldValuesParameterFormatString="{0}" ProviderName="" SelectCommand="SELECT [Id], [SiteId], [LeafName], [Level] FROM [AllDocs]" SelectCommandType="Text" SortParameterName="" SqlCacheDependency="" UpdateCommand="" UpdateCommandType="Text">
+</SharePoint:SPSqlDataSource>
+
 

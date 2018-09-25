@@ -41,6 +41,7 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -71,6 +72,7 @@
   <ItemGroup>
     <Compile Include="EventReceiver1\EventReceiver1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharePointLinq.cs" />
     <Compile Include="VisualWebPart1\VisualWebPart1.cs" />
     <Compile Include="VisualWebPart1\VisualWebPart1UserControl.ascx.cs">
       <DependentUpon>VisualWebPart1UserControl.ascx</DependentUpon>
