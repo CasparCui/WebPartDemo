@@ -1,0 +1,89 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Size="2552, 1671" AutoSizeMargin="16, 24" Location="30, 30" Name="Workflow1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetActivity="stateActivity2" TargetConnectionEdge="Top" SetStateName="setStateActivity4" SourceActivity="stateActivity1" TargetConnectionIndex="0" SourceStateName="stateActivity1" SourceConnectionEdge="Right" EventHandlerName="eventDrivenActivity2" SourceConnectionIndex="1" TargetStateName="stateActivity2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="743" Y="369" />
+				<ns0:Point X="1059" Y="369" />
+				<ns0:Point X="1059" Y="621" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateActivity2" TargetConnectionEdge="Top" SetStateName="setStateActivity3" SourceActivity="stateActivity1" TargetConnectionIndex="0" SourceStateName="stateActivity1" SourceConnectionEdge="Right" EventHandlerName="eventDrivenActivity2" SourceConnectionIndex="1" TargetStateName="stateActivity2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="743" Y="369" />
+				<ns0:Point X="1059" Y="369" />
+				<ns0:Point X="1059" Y="621" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateActivity2" TargetConnectionEdge="Top" SetStateName="setStateActivity1" SourceActivity="Workflow1InitialState" TargetConnectionIndex="0" SourceStateName="Workflow1InitialState" SourceConnectionEdge="Right" EventHandlerName="eventDrivenActivity1" SourceConnectionIndex="0" TargetStateName="stateActivity2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="339" Y="205" />
+				<ns0:Point X="1059" Y="205" />
+				<ns0:Point X="1059" Y="621" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateActivity1" TargetConnectionEdge="Top" SetStateName="setStateActivity2" SourceActivity="Workflow1InitialState" TargetConnectionIndex="0" SourceStateName="Workflow1InitialState" SourceConnectionEdge="Right" EventHandlerName="eventDrivenActivity1" SourceConnectionIndex="0" TargetStateName="stateActivity1">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="339" Y="205" />
+				<ns0:Point X="628" Y="205" />
+				<ns0:Point X="628" Y="259" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Size="297, 106" AutoSizeMargin="16, 24" Location="46, 137" Name="Workflow1InitialState">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="eventDrivenActivity1" Size="381, 619" Location="54, 186">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onWorkflowActivated1" Size="133, 76" Location="178, 267" />
+						<IfElseDesigner Name="ifElseActivity1" Size="361, 424" Location="64, 362">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifElseBranchActivity1" Size="150, 305" Location="83, 452">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity3" Size="130, 76" Location="93, 533" />
+										<SetStateDesigner Name="setStateActivity1" Size="130, 110" Location="93, 628" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity2" Size="150, 305" Location="256, 452">
+									<IfElseBranchDesigner.Designers>
+										<ActivityDesigner Name="logToHistoryListActivity2" Size="130, 76" Location="266, 533" />
+										<SetStateDesigner Name="setStateActivity2" Size="130, 110" Location="266, 628" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="356, 132" AutoSizeMargin="16, 24" Location="450, 259" Name="stateActivity1">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="stateInitializationActivity1" Size="153, 271" Location="458, 308">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createTask1" Size="133, 76" Location="468, 389" />
+						<ActivityDesigner Name="logToHistoryListActivity1" Size="130, 76" Location="469, 484" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventDrivenActivity2" Size="381, 524" Location="458, 350">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onTaskChanged1" Size="140, 76" Location="578, 431" />
+						<IfElseDesigner Name="ifElseActivity2" Size="361, 329" Location="468, 526">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifElseBranchActivity3" Size="150, 210" Location="487, 616">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setStateActivity4" Size="130, 110" Location="497, 697" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity4" Size="150, 210" Location="660, 616">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setStateActivity3" Size="130, 110" Location="670, 697" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="196, 80" AutoSizeMargin="16, 24" Location="961, 621" Name="stateActivity2" />
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

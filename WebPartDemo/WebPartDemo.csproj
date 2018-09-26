@@ -40,15 +40,44 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Activities" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,6 +93,10 @@
     <Reference Include="System.Web.RegularExpressions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -82,6 +115,19 @@
       <DependentUpon>VisualWebPart1UserControl.ascx.cs</DependentUpon>
     </Compile>
     <Compile Include="VisualWebPart1\WebPart1\WebPart1.cs" />
+    <Compile Include="Workflow1\Workflow1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Workflow1\Workflow1.Designer.cs">
+      <DependentUpon>Workflow1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow1\WorkflowInitiationForm1.aspx.cs">
+      <DependentUpon>WorkflowInitiationForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow1\WorkflowInitiationForm1.aspx.designer.cs">
+      <DependentUpon>WorkflowInitiationForm1.aspx.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -91,6 +137,9 @@
     </None>
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{cbe05654-15c4-410f-9788-c79cbdf8d9a8}</FeatureId>
+    </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{cdb767da-5966-4a90-b7da-1dbef5fe0342}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
@@ -107,15 +156,30 @@
       <SharePointProjectItemId>{688b22ff-fedf-48cc-8970-5ef684ff29b6}</SharePointProjectItemId>
     </None>
     <None Include="VisualWebPart1\WebPart1.webpart" />
+    <None Include="Workflow1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{79b5d549-303b-4ece-b9b0-286806bbf753}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="EventReceiver1\Elements.xml" />
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
     </Content>
     <Content Include="VisualWebPart1\Elements.xml" />
     <Content Include="VisualWebPart1\VisualWebPart1UserControl.ascx" />
     <Content Include="VisualWebPart1\WebPart1\Elements.xml" />
+    <Content Include="Workflow1\Elements.xml" />
+    <Content Include="Workflow1\WorkflowInitiationForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Workflow1\Workflow1.layout">
+      <DependentUpon>Workflow1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

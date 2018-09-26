@@ -2,5 +2,6 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6e7131f9-d40e-4e57-bb79-81aa433a4672" solutionId="6e7131f9-d40e-4e57-bb79-81aa433a4672" resetWebServer="false" sharePointProductVersion="15.0" name="WebPartDemo" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
     <featureReference itemId="cbe05654-15c4-410f-9788-c79cbdf8d9a8" />
+    <featureReference itemId="cdb767da-5966-4a90-b7da-1dbef5fe0342" />
   </features>
 </package>
