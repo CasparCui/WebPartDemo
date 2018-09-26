@@ -16,7 +16,7 @@
     Write Something: <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>   
      <asp:Button ID="StartWorkflow" runat="server" OnClick="StartWorkflow_Click" Text="启动工作流" />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Cancel" runat="server" OnClick="Cancel_Click" Text="取消  " />
+    <asp:Button ID="Cancel" runat="server" OnClick="Cancel_Click" Text="取消" />
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">
