@@ -47,6 +47,7 @@ namespace GetListDataIntoXml
             var dataEleList = new List<XElement>();
             
             var item = list.GetItemById(itemId);
+
             foreach(var f_Name in fieldNameList)
             {
                 var fieldValue = item.GetFormattedValue(f_Name);
