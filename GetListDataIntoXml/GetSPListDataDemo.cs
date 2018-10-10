@@ -45,7 +45,6 @@ namespace GetListDataIntoXml
             if (fieldNameList == null)
                 throw new Exception();
             var dataEleList = new List<XElement>();
-            
             var item = list.GetItemById(itemId);
 
             foreach(var f_Name in fieldNameList)
